@@ -1,0 +1,25 @@
+MDScreen:
+    name: 'main'
+    md_bg_color: "#09143C"
+    MDBoxLayout:
+        orientation:'vertical'
+        MDBoxLayout:
+            size_hint_y:.25
+            padding:dp(25)
+            MDBoxLayout:
+                orientation:"vertical"
+                MDLabel:
+                    text:"Home"
+                    font_style:"H4"
+                MDBoxLayout:
+                    adaptive_size:True
+                    spacing:dp(10)
+
+
+        MDGridLayout:
+            size_hint_y:.75
+            cols:2
+            padding:[dp(15),dp(15),dp(15),dp(35)]
+            spacing:dp(15)
+
+
