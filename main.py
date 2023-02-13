@@ -38,12 +38,36 @@ MDScreen:
 """
 
 minp = """
+MDScreen:
+    name: 'main'
+    md_bg_color: "#09143C"
+    MDBoxLayout:
+        orientation:'vertical'
+        MDBoxLayout:
+            size_hint_y:.25
+            padding:dp(25)
+            MDBoxLayout:
+                orientation:"vertical"
+                MDLabel:
+                    text:"Home"
+                    font_style:"H4"
+                MDBoxLayout:
+                    adaptive_size:True
+                    spacing:dp(10)
+
+
+        MDGridLayout:
+            size_hint_y:.75
+            cols:2
+            padding:[dp(15),dp(15),dp(15),dp(35)]
+            spacing:dp(15)
+"""
 class MainApp(MDApp):
 
     def build(self):
         screen_manager = ScreenManager()
-        screen_manager.add_widget(Builder.load_file("welcome_page.kv"))
-        screen_manager.add_widget(Builder.load_file("main.kv"))
+        screen_manager.add_widget(Builder.load_string(welc))
+        screen_manager.add_widget(Builder.load_string(minp))
         return screen_manager
 
 if __name__ == "__main__":
